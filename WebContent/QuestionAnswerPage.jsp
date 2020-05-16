@@ -150,7 +150,7 @@ h1.completed {
 			}
 			
 			if(size1>0 && i==0 ){
-				%><h1>You have already given the test: (<a href="Result.jsp" name="sub_id" value="<%=st_id %>" >see the result</a>)</h1><%
+				%><h1>You have already given the test: (<a href="Result.jsp?sub_id=<%=sub_id%>">see the result</a>)</h1><%
 			}
 			if(size1==0)
 			{

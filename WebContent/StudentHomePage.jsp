@@ -20,7 +20,7 @@ table, th, td {
 	border: 1px solid black;
 	border-collapse: collapse;
 }
-* {
+ * {
 	box-sizing: border-box;
 }
 
@@ -153,7 +153,7 @@ button:hover {
 		<a class="active" href="">Home</a> <a href="#about">About</a> <a
 			href="StudentPhase1.jsp" >Take a test</a>
 			<a
-			href="" >Test Result</a>
+			href="TestResultPhase1.jsp" >Test Result</a>
 		<div class="search-container">
 			<form action=" ">
 				<input type="text" placeholder="Search for a subject.." name="search">
@@ -168,7 +168,7 @@ button:hover {
 	<div class="header">
 	<h1>Welcome to Home Page</h1>
       <% 
-      long id=Long.parseLong(request.getParameter("id"));
+      long id=Long.parseLong(request.getParameter("id").toString());
 			StudentOperation sto=new StudentOperation();
 				Student st=sto.selectStudent(id);
 				%>

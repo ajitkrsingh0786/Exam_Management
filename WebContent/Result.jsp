@@ -24,12 +24,16 @@
 	border-collapse: collapse;
 	text-align:center;
 }
+td{
+  
+ height:50px;
+ }
 div {
-	background-color: lightblue;
+	background-color: cyan;
 }
  </style>
 </head>
-<body bgcolor="cyan">
+<body bgcolor="lightcyan">
       <%if(session.getAttribute("id")!=null)
       {
     	long st_id=Long.parseLong(session.getAttribute("id").toString());  
@@ -75,9 +79,9 @@ div {
     	    		      <td width="25%"><%=ans1.getWriteORwrong() %></span></td>
     	    		   </tr>
     	    		    <tr> 
-    	    		      <td width="25%" style="background-color:cyan;"></td>
-    	    		      <td width="50%" style="background-color:cyan;"></td>
-    	    		      <td width="25%" style="background-color:cyan;"></td>
+    	    		      <td width="25%" style="background-color:lightcyan;"></td>
+    	    		      <td width="50%" style="background-color:lightcyan;"></td>
+    	    		      <td width="25%" style="background-color:lightcyan;"></td>
     	    		   </tr>
     	    		   <%
     	    		    } }
