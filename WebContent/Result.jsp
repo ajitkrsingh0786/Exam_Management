@@ -30,10 +30,10 @@ div {
  </style>
 </head>
 <body bgcolor="cyan">
-      <%if(true)//session.getAttribute("id")!=null)
+      <%if(session.getAttribute("id")!=null)
       {
-    	long st_id=1;//Long.parseLong(session.getAttribute("id").toString());  
-    	  int sub_id=1;//Integer.parseInt(request.getParameter("sub_id"));
+    	long st_id=Long.parseLong(session.getAttribute("id").toString());  
+    	  int sub_id=Integer.parseInt(request.getParameter("sub_id"));
     	  StudentOperation sto=new StudentOperation();
     	  SubjectOperation subo=new SubjectOperation();
     	  AnswerOperation ao=new  AnswerOperation();
