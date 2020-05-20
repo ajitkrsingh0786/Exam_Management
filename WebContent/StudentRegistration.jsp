@@ -43,19 +43,8 @@ width: 40%;
    }
    
    </style>
-   <script type="text/javascript">
-       function validate(){
-    	   var password=getElementById(password).value;
-    	   if(password.length<5)
-    		   {
-    		   
-    		   getElementById(password).innerHTML
-    		   }
-       } 
-   
-   </script>
-   
-   
+    
+     
 </head>
 <body bgcolor="cyan">
 
@@ -83,8 +72,9 @@ width: 40%;
     <label for="address"><b>Address</b></label>
     <input type="text" placeholder="address" name="address" size="40" required><br><br>
     
+    <p id="contact1"></p>
     <label for="contact"><b>Contact</b></label>
-    <input type="text" placeholder="cantact" name="cantact" size="40" required>
+    <input id="contact" type="text" placeholder="cantact" name="cantact" size="40" required>
     
     <label for="course"><b>Course</b></label>
     <input type="text" placeholder="course name" name="course" size="40" required><br><br>
@@ -92,12 +82,46 @@ width: 40%;
     <label for="username"><b>Username</b></label>
     <input type="text" placeholder="username" name="username" size="40" required>
     
+    <p id="pass"></p>
     <label for="password"><b>Password</b></label>
     <input id="password" type="password" placeholder="password"  name="password" size="40" required>
     <hr>
     <input type="submit"  width="40" height="20">  
      </div>
     </form>
+     
+      <script type="text/javascript">
+      
+      function validate(){
+    	  var phoneno = /^\d{10}$/;
+    	  if(!(document.getElementById("contact").value.match(phoneno))){
+    		  document.getElementById("contact1").innerHTML="contact number legth should be 10 and numeric only";
+    		  document.getElementById("contact1").style.color="red";
+    		  return false;
+    	  }
+    	  else if((document.getElementById("password").value).length<5 || (document.getElementById("password").value).length>10 ||){
+    		  
+    		   
+    		  document.getElementById("pass").innerHTML="password Length should be greater than 5 and less than 10";
+    		  document.getElementById("pass").style.color="red";
+    		  document.getElementById("password").style.borderWidth = "thik";
+    		  document.getElementById("password").style.borderColor ="red";
+    		  
+    		  return false;
+    	  }
+    	   
+    	  
+    		 
+    	  
+      }
+      
+      
+      </script>
+      
+   
+   
+      
+     
       
 
 </body>
